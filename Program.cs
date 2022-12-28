@@ -1,52 +1,32 @@
-﻿using System; 
-using System.Linq; 
- 
-namespace Prime_Numbers 
-{ 
- public static class Program 
- { 
-  public static void Main(string[] args) 
-  { 
-   Console.WriteLine("Enter A Number 1"); 
-   int Number1 = int.Parse(Console.ReadLine()); 
-    
-   Console.WriteLine("Enter A Number 2"); 
-   int Number2 = int.Parse(Console.ReadLine()); 
-    
-   Console.WriteLine(" Theses are the numbers , Number1 , Number2"); 
-   for(int M = Number1 ; M <= Number2 ; M++) 
-    
- 
-    
-    
-    
- 
-   { 
-     
-     
-    int counter = 0 ; 
-    for (int A = 2 ; A<= M/2; A++ ) 
- 
-    { 
-     if(M % A == 0) 
-     
-    { 
-     counter++; 
-     break; 
-     
-    } 
-     
- 
-   } 
-      if (counter == 0 && M != 1) 
-    
- 
- 
-          { 
-              Console.WriteLine("{0}", M ) ; 
- 
-} 
-} 
-} 
-}
+﻿using System;
+
+namespace PerfectNumbers
+{
+	public class Program
+	{
+		public static void Main()
+		{
+			int sum;
+			Console.WriteLine("Enter Number 1");
+			int Number1 = int.Parse(Console.ReadLine());
+			Console.WriteLine("Enter Number 2");
+			int Number2 = int.Parse(Console.ReadLine());
+			for (int x = Number1; x <= Number2; x++)
+			{
+				sum = 0;
+				for (int Number3 = 1; Number3 < x; Number3++)
+				{
+					if (x % Number3 == 0)
+					{
+						sum += Number3;
+					}
+				}
+				if (sum == x)
+				{
+					Console.WriteLine(x + "is perefect");
+				}
+			}
+		}
+	}
+
 }
